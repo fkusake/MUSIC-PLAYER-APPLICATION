@@ -1,0 +1,289 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+/* header Part */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+    align-items: center;
+}
+
+
+
+/* Toggle Part */
+.ToggleDiv{
+   margin-right: 5px;
+   display: flex;
+   flex-direction: row;
+   width: 8%;
+   height: 50px;
+   position: relative;
+}
+.label{
+   width: 90%;
+   height: 100%;
+   border-radius: 70px;
+   position: relative;
+   z-index: 1;
+   border: 1px solid black;
+}
+.label::before{
+   position: absolute;
+   content: "";
+   width: 40px;
+   height: 40px;
+   background-color: black;
+   border-radius: 50%;
+   margin-top: 5px;
+   margin-left: 4px;
+   transition: 0.5s ease;
+}
+
+.ToggleDiv input:checked + .label::before{
+   transform: translateX(60px);
+}
+.ToggleDiv input{
+   display: none;
+}
+.ToggleDiv .fa-moon{
+   position: absolute;
+   z-index: 2;
+   left: 80px;
+   top:15px;
+   color: white;
+}
+.ToggleDiv .fa-lightbulb{
+   position: absolute;
+   z-index: 2;
+   right: 90px;
+   top:15px;
+   color: white;
+}
+/* end */
+
+
+
+/* main Part */
+.mainDivs{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    height: 35em;
+    margin-top: 1em;
+}
+.mainsub{
+    width: 40%;
+    background-color: skyblue;
+}
+
+/* First Div */
+.firstDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  width: 30%;
+  padding: 0.3em;
+  border-radius:0em 0.5em 0.5em 0em;
+}
+
+/* Genre section */
+.Genre{
+    margin-top: 1em;
+}
+select{
+    width: 55%;
+    height: 3em;
+    border-radius: 1em;
+    background-color: rgb(89, 124, 124);
+    border: none
+}
+label{
+    font-weight: bolder;
+}
+/* Allsongs part */
+.Allsongs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4em;
+}
+.songs{
+    width: 80%;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background-color: rgb(11, 178, 245);   
+    transition: 0.5s ease;
+    margin-left: 1em;
+}
+.songs:hover{
+    cursor: pointer;
+    background-color: skyblue;
+}
+/* end */
+
+ /* second div */
+.secondDivs{
+    width: 35%;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    box-shadow: -1px -1px 3px darkmagenta;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+ /* song Card */
+ .songCard{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1em;
+    padding: 1em;
+    border-radius: 0.8em;
+    background-color:  rgb(11, 178, 245);
+    box-shadow: -1px -1px 3px darkmagenta;
+ }
+ .songCard h2{
+    padding: 0px;
+    margin: 0px;
+ }
+ .songCard p{
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0.2em;
+ }
+ .songCard img{
+    width: 100%;
+ }
+ /* audioTap div */
+ .audioTap{
+    width: 100%;
+ }
+ .audioTap audio{
+    width: 90%;
+    margin-left: 1.5rem;
+ }
+ /* forBack btns div */
+ .forBackBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2em;
+ }
+ .btns{
+    background-color: blueviolet;
+    width: 20%;
+    height: 3.5em;
+    border: none;
+    border-radius: 0.5em;
+ }
+
+
+ /* Add to playlist Button */
+ .addtoPlaylist{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 1em;
+ }
+ .addtoPlaylist button{
+    color: white;
+    font-weight: bold;
+    height: 3.5em;
+    background-color: blueviolet;
+    border-radius: 0.5em;
+    border: none;
+    width: 25%
+ }
+ /* end */
+
+
+ /* Third Div */
+ .thirdDivs{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    row-gap: 1em;
+    border-radius:0.5em 0em 0em 0.5em;
+ }
+ /* CreatePlaylist Input Part */
+.playListInput{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+.playListInput input{
+    width: 50%;
+    height: 3em;
+    border-radius: 0.5em;
+}
+.playListInput button{
+    color: white;
+    font-weight: bold;
+    background-color: blueviolet;
+    border-radius: 0.5em;
+    border: none;
+    height: 3em;
+    align-items: center;
+}
+
+/* Playlist Holder Part */
+ .savedSongs{
+    height: 100%;
+    background-color: skyblue;
+    border-radius:0.5em 0em 0em 0.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: -1px -1px 3px darkmagenta;
+ }
+ /* Songs getting Added to Playlist Part */
+ .allPlaylistDiv{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+ }
+ .playlistDiv{
+    width: 80%;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background-color: rgb(11, 178, 245);   
+    transition: 0.5s ease;
+    text-align: center;
+ }
+ .playlistDiv p{
+    margin: 0;
+    padding: 0;
+ }
+ .playlistDiv div{
+    display: none;
+ }
+ .playlistDiv:hover{
+    cursor: pointer;
+    background-color: skyblue;
+ }
+
+ /* Rendering the Current Playlist Songs */
+.currentPlaylistDiv{
+   display: flex;
+   flex-direction: column;
+   row-gap: 0.5em;
+}
+
+
+ .currentPlaylistDiv div{
+    width: 80%;
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background-color: rgb(11, 178, 245);   
+    transition: 0.5s ease;
+    display: none;
+
+ }
+ .currentPlaylistDiv div:hover{
+    cursor: pointer;
+    background-color: skyblue;
+ }
